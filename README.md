@@ -9,12 +9,12 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 ---
 
 ## ✨ Features  
-- 👥 **Multi-role system**: Admin and Tenant (business).  
-- 📄 **Knowledge upload**: Supports **PDF** and **JSONL** files.  
-- 🔎 **Semantic search**: Uses PostgreSQL with **pgvector** for embeddings.  
-- 🤖 **Personalized chatbots**: Businesses build their own knowledge bases.  
-- 🌐 **SDK integration**: Chatbots can be embedded into external websites.  
-- ⚡ **Fast retrieval**: Powered by **HNSW indexing** for efficient similarity search.  
+-  **Multi-role system**: Admin and Tenant (business).  
+-  **Knowledge upload**: Supports **PDF** and **JSONL** files.  
+-  **Semantic search**: Uses PostgreSQL with **pgvector** for embeddings.  
+-  **Personalized chatbots**: Businesses build their own knowledge bases.  
+-  **SDK integration**: Chatbots can be embedded into external websites.  
+-  **Fast retrieval**: Powered by **HNSW indexing** for efficient similarity search.  
 
 ---
 
@@ -31,12 +31,12 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 ---
 
 ## ⚙️ How It Works  
-1. 📂 Businesses upload documents (PDF/JSONL).  
-2. 🧩 Content is processed into embeddings (1536-dim vectors).  
-3. 🗄️ Vectors are stored in PostgreSQL with `pgvector`.  
-4. 🔎 A user query is embedded and compared to stored vectors (cosine similarity + HNSW).  
-5. 📝 The most relevant context is retrieved.  
-6. 🤖 GPT-4o-mini generates a context-aware, personalized response.  
+1.  Businesses upload documents (PDF/JSONL).  
+2.  Content is processed into embeddings (1536-dim vectors).  
+3.  Vectors are stored in PostgreSQL with `pgvector`.  
+4.  A user query is embedded and compared to stored vectors (cosine similarity + HNSW).  
+5.  The most relevant context is retrieved.  
+6.  GPT-4o-mini generates a context-aware, personalized response.  
 
 ---
 
