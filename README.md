@@ -1,66 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🧠 Business Chatbot Platform with RAG  
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project is a **platform that enables businesses to create and personalize AI-powered chatbots** using their own documents and data.  
+It was developed as part of my thesis, showcasing how **Retrieval-Augmented Generation (RAG)** can be applied in real-world business environments.  
 
-## About Laravel
+The system allows companies to upload knowledge sources (PDF/JSONL), which are processed into **embeddings** and stored in a vector database.  
+When customers interact with the chatbot, it retrieves the most relevant information and generates **accurate, context-aware answers** using OpenAI models.  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features  
+- 👥 **Multi-role system**: Admin and Tenant (business).  
+- 📄 **Knowledge upload**: Supports **PDF** and **JSONL** files.  
+- 🔎 **Semantic search**: Uses PostgreSQL with **pgvector** for embeddings.  
+- 🤖 **Personalized chatbots**: Businesses build their own knowledge bases.  
+- 🌐 **SDK integration**: Chatbots can be embedded into external websites.  
+- ⚡ **Fast retrieval**: Powered by **HNSW indexing** for efficient similarity search.  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🏗️ Architecture  
+- **Backend**: Laravel (APIs, authentication, queues, embeddings)  
+- **Frontend**: Vue.js (tenant dashboards, chatbot UI)  
+- **Database**: PostgreSQL + pgvector  
+- **AI Models**: OpenAI  
+  - `text-embedding-3-small` → for embeddings  
+  - `gpt-4o-mini` → for response generation  
+- **Security**: Laravel Sanctum, Policies  
+- **Background Jobs**: Laravel Queues  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ⚙️ How It Works  
+1. 📂 Businesses upload documents (PDF/JSONL).  
+2. 🧩 Content is processed into embeddings (1536-dim vectors).  
+3. 🗄️ Vectors are stored in PostgreSQL with `pgvector`.  
+4. 🔎 A user query is embedded and compared to stored vectors (cosine similarity + HNSW).  
+5. 📝 The most relevant context is retrieved.  
+6. 🤖 GPT-4o-mini generates a context-aware, personalized response.  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📊 Example Use Case  
+**Airline Agency**  
+- Uploads policies, FAQs, and travel guidelines.  
+- Customers ask about baggage rules, flight changes, or refunds.  
+- The chatbot retrieves accurate info from the uploaded docs and responds instantly.  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 📚 Thesis Context  
+This project was developed as part of my **Bachelor’s/Master’s thesis**, demonstrating how **RAG (Retrieval-Augmented Generation)** can bridge the gap between general-purpose LLMs and domain-specific business needs.  
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## 🔗 Related Repositories  
+- [Backend (Laravel)](https://github.com/LejlaBeqiri/chatbot-platform)  
+- [Frontend (Vue.js)](https://github.com/LejlaBeqiri/chatbot-platform-frontend)  
+- [Frontend SDK](https://github.com/LejlaBeqiri/chatbot-frontend-sdk)  
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📌 Future Improvements  
+- Multi-language chatbot support.  
+- Analytics dashboard for businesses.  
+- Voice-enabled chatbot.  
+- Optional fine-tuning for specialized industries.  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
