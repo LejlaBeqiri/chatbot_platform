@@ -49,7 +49,7 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 ---
 
 ## 📚 Thesis Context  
-This project was developed as part of my **Bachelor’s/Master’s thesis**, demonstrating how **RAG (Retrieval-Augmented Generation)** can bridge the gap between general-purpose LLMs and domain-specific business needs.  
+This project was developed as part of my **Bachelor’s thesis**, demonstrating how **RAG (Retrieval-Augmented Generation)** can bridge the gap between general-purpose LLMs and domain-specific business needs.  
 
 ---
 
