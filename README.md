@@ -56,7 +56,6 @@ This project was developed as part of my **Bachelor’s thesis**, demonstrating 
 ## 🔗 Related Repositories  
 - [Backend (Laravel)](https://github.com/LejlaBeqiri/chatbot_platform)  
 - [Frontend (Vue.js)](https://github.com/LejlaBeqiri/chatbot_platform_frontend)  
-- [Frontend SDK](https://github.com/LejlaBeqiri/chatbot_frontend_sdk)  
 
 ---
 
