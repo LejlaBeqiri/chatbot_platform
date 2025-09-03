@@ -3,14 +3,14 @@
 This project is a **platform that enables businesses to create and personalize AI-powered chatbots** using their own documents and data.  
 It was developed as part of my thesis, showcasing how **Retrieval-Augmented Generation (RAG)** can be applied in real-world business environments.  
 
-The system allows companies to upload knowledge sources (PDF/JSONL), which are processed into **embeddings** and stored in a vector database.  
+The system allows companies to upload knowledge base sources (PDF/JSONL), which are processed into **embeddings** and stored in a vector database.  
 When customers interact with the chatbot, it retrieves the most relevant information and generates **accurate, context-aware answers** using OpenAI models.  
 
 ---
 
 ## ✨ Features  
 -  **Multi-role system**: Admin and Tenant (business).  
--  **Knowledge upload**: Supports **PDF** and **JSONL** files.  
+-  **Knowledge base management**: Supports **PDF** and **JSONL** files.  
 -  **Semantic search**: Uses PostgreSQL with **pgvector** for embeddings.  
 -  **Personalized chatbots**: Businesses build their own knowledge bases.  
 -  **SDK integration**: Chatbots can be embedded into external websites.  
