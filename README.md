@@ -1,4 +1,4 @@
-# 🧠 Business Chatbot Platform with RAG  
+#  Business Chatbot Platform with RAG  
 
 This project is a **platform that enables businesses to create and personalize AI-powered chatbots** using their own documents and data.  
 It was developed as part of my thesis, showcasing how **Retrieval-Augmented Generation (RAG)** can be applied in real-world business environments.  
@@ -8,7 +8,7 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 
 ---
 
-## ✨ Features  
+##  Features  
 -  **Multi-role system**: Admin and Tenant (business).  
 -  **Knowledge base management**: Supports **PDF** and **JSONL** files.  
 -  **Semantic search**: Uses PostgreSQL with **pgvector** for embeddings.  
@@ -18,7 +18,7 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 
 ---
 
-## 🏗️ Architecture  
+##  Architecture  
 - **Backend**: Laravel (APIs, authentication, queues, embeddings)  
 - **Frontend**: Vue.js (tenant dashboards, chatbot UI)  
 - **Database**: PostgreSQL + pgvector  
@@ -30,7 +30,7 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 
 ---
 
-## ⚙️ How It Works  
+##  How It Works  
 1.  Businesses upload documents (PDF/JSONL).  
 2.  Content is processed into embeddings (1536-dim vectors).  
 3.  Vectors are stored in PostgreSQL with `pgvector`.  
@@ -40,7 +40,7 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 
 ---
 
-## 📊 Example Use Case  
+##  Example Use Case  
 **Airline Agency**  
 - Uploads policies, FAQs, and travel guidelines.  
 - Customers ask about baggage rules, flight changes, or refunds.  
@@ -48,17 +48,17 @@ When customers interact with the chatbot, it retrieves the most relevant informa
 
 ---
 
-## 📚 Thesis Context  
+##  Thesis Context  
 This project was developed as part of my **Bachelor’s thesis**, demonstrating how **RAG (Retrieval-Augmented Generation)** can bridge the gap between general-purpose LLMs and domain-specific business needs.  
 
 ---
 
-## 🔗 Related Repositories  
+##  Related Repositories  
 - [Frontend (Vue.js)](https://github.com/LejlaBeqiri/chatbot_platform_frontend)
   
 ---
 
-## 📌 Future Improvements  
+##  Future Improvements  
 - Multi-language chatbot support.  
 - Analytics dashboard for businesses.  
 - Voice-enabled chatbot.  
